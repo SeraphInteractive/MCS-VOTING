@@ -1,0 +1,24 @@
+{
+  "name": "@vote-internals/logic",
+  "version": "1.0.0",
+  "description": "Mathematical, statistical, and anti-raid logic engine for the community voting system",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "voting",
+    "borda",
+    "statistics",
+    "z-score",
+    "bayesian-shrinkage",
+    "raid-detection"
+  ],
+  "author": "vote-internals team",
+  "license": "MIT"
+}
