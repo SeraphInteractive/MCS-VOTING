@@ -11,14 +11,14 @@ Add the dependency to `package.json`:
 ```json
 {
   "dependencies": {
-    "@vote-internals/logic": "github:SeraphInteractive/MCS-VOTING-internal-logic#main"
+    "@vote-internals/logic": "github:SeraphInteractive/MCS-internal-logic#main"
   }
 }
 ```
 
 Or install via npm:
 ```bash
-npm install github:SeraphInteractive/MCS-VOTING-internal-logic
+npm install github:SeraphInteractive/MCS-internal-logic
 ```
 
 ---
