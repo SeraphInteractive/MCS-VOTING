@@ -20,5 +20,9 @@
     "anomaly-detection"
   ],
   "author": "vote-internals team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
 }
