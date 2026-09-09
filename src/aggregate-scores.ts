@@ -18,8 +18,8 @@ AGGREGATE SCORES
  * - We check that sum(S_j) == 6 * N. If it doesn't match, we know something leaked!
  */
 
-import type { Ballot, EntryId, EntryScoreBreakdown } from './types.ts';
-import { POINTS_PER_BALLOT, RANK_WEIGHTS } from './types.ts';
+import type { Ballot, EntryId, EntryScoreBreakdown } from './types.js';
+import { POINTS_PER_BALLOT, RANK_WEIGHTS } from './types.js';
 
 export interface AggregationResult {
   readonly scores: ReadonlyMap<EntryId, EntryScoreBreakdown>;

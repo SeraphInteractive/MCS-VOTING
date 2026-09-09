@@ -1,4 +1,4 @@
-import type { Ballot, EntryId } from './types.ts';
+import type { Ballot, EntryId } from './types.js';
 
 export interface ScoreMatrixResult {
   readonly entryToIndex: ReadonlyMap<EntryId, number>;

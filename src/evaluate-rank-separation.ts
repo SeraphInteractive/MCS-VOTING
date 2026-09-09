@@ -12,9 +12,9 @@
  *   -> "STATISTICAL_TIE" -> Score wobble! Trigger a tiered runoff re-vote.
  */
 
-import type { Ballot, EntryScoreBreakdown, PairwiseSeparation } from './types.ts';
-import { calculate_moments_and_variance } from './calculate-moments-and-variance.ts';
-import { calculate_pairwise_covariance } from './calculate-pairwise-covariance.ts';
+import type { Ballot, EntryScoreBreakdown, PairwiseSeparation } from './types.js';
+import { calculate_moments_and_variance } from './calculate-moments-and-variance.js';
+import { calculate_pairwise_covariance } from './calculate-pairwise-covariance.js';
 
 // Standard 95% two-tailed cutoff (|Z| >= 1.96 -> p <= 0.05)
 export const DEFAULT_Z_THRESHOLD = 1.96;

@@ -4,7 +4,7 @@
  *   Cov(X_ia, X_ib) <= 0
  */
 
-import type { Ballot, EntryId } from './types.ts';
+import type { Ballot, EntryId } from './types.js';
 
 export interface PairwiseCovarianceResult {
   readonly singleBallotCovariance: number;

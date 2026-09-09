@@ -7,7 +7,7 @@
  * ============================================================================
  */
 
-import type { EntryScoreBreakdown } from './types.ts';
+import type { EntryScoreBreakdown } from './types.js';
 
 /**
  * Computes normalized Shannon rank entropy in [0.0, 1.0].

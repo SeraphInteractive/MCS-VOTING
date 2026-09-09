@@ -12,10 +12,10 @@
  * - CRITICAL_RAID (>= 0.75): Blatant streamer raid or bot attack detected!
  */
 
-import type { EntryScoreBreakdown, RaidSeverity, RaidTelemetry } from './types.ts';
-import { RANK_WEIGHTS } from './types.ts';
-import { calculate_skew_ratio } from './calculate-skew-ratio.ts';
-import { calculate_rank_entropy } from './calculate-rank-entropy.ts';
+import type { EntryScoreBreakdown, RaidSeverity, RaidTelemetry } from './types.js';
+import { RANK_WEIGHTS } from './types.js';
+import { calculate_skew_ratio } from './calculate-skew-ratio.js';
+import { calculate_rank_entropy } from './calculate-rank-entropy.js';
 
 // Don't flag entries with fewer than 10 votes to avoid false positives on early testers
 export const MIN_APPEARANCES_FOR_RAID_FLAG = 10;

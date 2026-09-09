@@ -16,8 +16,8 @@
  *   Var(S) = N * Var(X)  (total score variance across all N voters)
  */
 
-import type { EntryMoments, EntryScoreBreakdown } from './types.ts';
-import { RANK_WEIGHTS } from './types.ts';
+import type { EntryMoments, EntryScoreBreakdown } from './types.js';
+import { RANK_WEIGHTS } from './types.js';
 
 /**
  * Calculates empirical probabilities, first & second moments, and total score variance.

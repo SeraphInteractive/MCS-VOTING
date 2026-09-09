@@ -5,14 +5,14 @@
  * across Adonis.js backend, Next.js frontend, and edge services.
  */
 
-export * from './types.ts';
-export * from './validate-ballot.ts';
-export * from './aggregate-scores.ts';
-export * from './build-score-matrix.ts';
-export * from './calculate-moments-and-variance.ts';
-export * from './calculate-pairwise-covariance.ts';
-export * from './evaluate-rank-separation.ts';
-export * from './calculate-bayesian-shrinkage.ts';
-export * from './calculate-skew-ratio.ts';
-export * from './calculate-rank-entropy.ts';
-export * from './analyze-raid-risk.ts';
+export * from './types.js';
+export * from './validate-ballot.js';
+export * from './aggregate-scores.js';
+export * from './build-score-matrix.js';
+export * from './calculate-moments-and-variance.js';
+export * from './calculate-pairwise-covariance.js';
+export * from './evaluate-rank-separation.js';
+export * from './calculate-bayesian-shrinkage.js';
+export * from './calculate-skew-ratio.js';
+export * from './calculate-rank-entropy.js';
+export * from './analyze-raid-risk.js';

@@ -7,8 +7,8 @@
  * 
  */
 
-import type { EntryScoreBreakdown } from './types.ts';
-import { RANK_WEIGHTS } from './types.ts';
+import type { EntryScoreBreakdown } from './types.js';
+import { RANK_WEIGHTS } from './types.js';
 
 export const DEFAULT_SKEW_EPSILON = 1.0;
 

@@ -13,8 +13,8 @@
  *   so its real score shines through.
  */
 
-import type { BayesianShrinkageResult, EntryScoreBreakdown } from './types.ts';
-import { POINTS_PER_BALLOT } from './types.ts';
+import type { BayesianShrinkageResult, EntryScoreBreakdown } from './types.js';
+import { POINTS_PER_BALLOT } from './types.js';
 
 // Default K: 30 dummy votes at the site-wide average
 export const DEFAULT_SHRINKAGE_K = 30;
