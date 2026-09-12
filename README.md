@@ -11,14 +11,14 @@ Add the dependency to `package.json`:
 ```json
 {
   "dependencies": {
-    "@vote-internals/logic": "github:SeraphInteractive/MCS-internal-logic#main"
+    "@platform/internal-logic": "github:SeraphInteractive/Platform-Internal-Logic#main"
   }
 }
 ```
 
 Or install via npm:
 ```bash
-npm install github:SeraphInteractive/MCS-internal-logic
+npm install github:SeraphInteractive/Platform-Internal-Logic
 ```
 
 ---
@@ -33,7 +33,7 @@ import {
   calculate_bayesian_shrinkage,
   analyze_raid_risk,
   type Ballot,
-} from '@vote-internals/logic';
+} from '@platform/internal-logic';
 
 // 1. Ballot validation (3-2-1 allocation, uniqueness, completeness)
 const ballot: Ballot = {
