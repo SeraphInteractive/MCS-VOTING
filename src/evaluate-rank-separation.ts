@@ -1,5 +1,4 @@
 /**
- *
  * How we evaluate the lead:
  * 1. Point difference: Delta = S_a - S_b
  * 2. Combined Variance: Var(Delta) = Var(S_a) + Var(S_b) - 2*Cov(S_a, S_b)
@@ -30,21 +29,21 @@ export function evaluate_rank_separation(
 ): PairwiseSeparation {
   const N = ballots.length;
 
-  // --- Step 1: Calculate individual variances ---
+  // Step 1: Calculate individual variances
   const momentsA = calculate_moments_and_variance(breakdownA, N);
   const momentsB = calculate_moments_and_variance(breakdownB, N);
 
   // Raw point gap: Delta = Sa - Sb
   const deltaScore = breakdownA.rawScore - breakdownB.rawScore;
 
-  // --- Step 2: Calculate ballot covariance ---
+  // Step 2: Calculate ballot covariance
   const { totalCovariance } = calculate_pairwise_covariance(
     breakdownA.entryId,
     breakdownB.entryId,
     ballots
   );
 
-  // --- Step 3: Combined variance of difference ---
+  // Step 3: Combined variance of difference
   // Var(Delta) = Var(Sa) + Var(Sb) - 2*Cov(Sa, Sb)
   const deltaVariance = Math.max(
     0,
@@ -54,7 +53,7 @@ export function evaluate_rank_separation(
   // Standard Error
   const standardError = Math.sqrt(deltaVariance);
 
-  // --- Step 4: Compute Z-Score (Z = Delta / SE) ---
+  // Step 4: Compute Z-Score (Z = Delta / SE)
   let zScore = 0;
   if (standardError > 1e-9) {
     zScore = deltaScore / standardError;
@@ -64,7 +63,7 @@ export function evaluate_rank_separation(
   const pValue = approximate_two_tailed_p_value(Math.abs(zScore));
   const isSignificant = Math.abs(zScore) >= zThreshold;
 
-  // --- Step 5: Classify outcome (Decisive Lead vs Statistical Wobble Tie) ---
+  // Step 5: Classify outcome (Decisive Lead vs Statistical Wobble Tie)
   const status: 'DECISIVE_LEAD' | 'STATISTICAL_TIE' = isSignificant
     ? 'DECISIVE_LEAD'
     : 'STATISTICAL_TIE';

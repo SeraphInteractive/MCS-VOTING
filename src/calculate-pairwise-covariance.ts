@@ -1,5 +1,4 @@
 /**
- * 
  * That mutual exclusion creates negative correlation / covariance:
  *   Cov(X_ia, X_ib) <= 0
  */

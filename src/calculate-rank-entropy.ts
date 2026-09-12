@@ -1,10 +1,8 @@
 /**
- * 
  * - High Entropy (~1.0): Healthy distribution. The community gave it some 1s,
  *   some 2s, and some 3s (organic consensus).
  * - Low Entropy (~0.0): Extreme polarization / raid. 99% of votes are crammed
  *   into a single rank position (usually rank 1).
- * ============================================================================
  */
 
 import type { EntryScoreBreakdown } from './types.js';

@@ -1,10 +1,3 @@
-/**
- * @vote-internals/logic - CORE ENTRY POINT
- *
- * Exporting all types, math modules, and statistical functions for consumption
- * across Adonis.js backend, Next.js frontend, and edge services.
- */
-
 export * from './types.js';
 export * from './validate-ballot.js';
 export * from './aggregate-scores.js';

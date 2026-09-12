@@ -1,5 +1,4 @@
 /**
- *
  * The Math Breakdown:
  * For any voter i and idea j, the points awarded is a random variable X_ij in {3, 2, 1, 0}.
  *
@@ -44,21 +43,21 @@ export function calculate_moments_and_variance(
 
   const N = totalBallots;
 
-  // --- Step 1: Compute empirical probabilities for each rank ---
+  // Step 1: Compute empirical probabilities for each rank
   const p1 = breakdown.rank1Count / N;
   const p2 = breakdown.rank2Count / N;
   const p3 = breakdown.rank3Count / N;
   // p0 is the chance a voter gave this idea 0 points
   const p0 = Math.max(0, 1.0 - (p1 + p2 + p3));
 
-  // --- Step 2: First moment E[X] (Expected score per voter) ---
+  // Step 2: First moment E[X] (Expected score per voter)
   // E[X] = 3*p1 + 2*p2 + 1*p3
   const expectedScorePerVoter =
     RANK_WEIGHTS[1] * p1 +
     RANK_WEIGHTS[2] * p2 +
     RANK_WEIGHTS[3] * p3;
 
-  // --- Step 3: Second moment E[X^2] (Why we square the weights!) ---
+  // Step 3: Second moment E[X^2] (Why we square the weights!)
   // Payoff is 3, 2, 1 -> Payoffs squared are 9, 4, 1
   // E[X^2] = 9*p1 + 4*p2 + 1*p3
   const secondMoment =
@@ -66,14 +65,14 @@ export function calculate_moments_and_variance(
     Math.pow(RANK_WEIGHTS[2], 2) * p2 +
     Math.pow(RANK_WEIGHTS[3], 2) * p3;
 
-  // --- Step 4: Single-ballot variance: Var(X) = E[X^2] - (E[X])^2 ---
+  // Step 4: Single-ballot variance: Var(X) = E[X^2] - (E[X])^2
   // Note: Clamp to 0 against IEEE 754 micro-precision floating point underflow
   const singleBallotVariance = Math.max(
     0,
     secondMoment - Math.pow(expectedScorePerVoter, 2)
   );
 
-  // --- Step 5: Scale to total score variance across all N ballots ---
+  // Step 5: Scale to total score variance across all N ballots
   // Var(S) = N * Var(X)
   const totalVariance = N * singleBallotVariance;
   const standardDeviation = Math.sqrt(totalVariance);

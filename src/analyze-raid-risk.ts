@@ -1,5 +1,4 @@
 /**
- *
  * How our Multi-Factor Raid Engine catches raids:
  * Instead of just checking one number, we combine 3 separate attack vectors:
  * 1. Skew Ratio (45% weight): Is Rank 1 points >> Rank 2 + Rank 3 points?

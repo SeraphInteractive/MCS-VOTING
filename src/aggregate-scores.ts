@@ -1,5 +1,5 @@
 /**
-AGGREGATE SCORES
+ * AGGREGATE SCORES
  *
  * "Let C = {c1, c2, c3....cM} be the universal set of M submitted entries/ideas
  * for a certain voting sesh. Let N be the total number of ballots cast.

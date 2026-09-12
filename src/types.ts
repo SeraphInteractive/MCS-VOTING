@@ -1,5 +1,4 @@
 /**
- * 
  * Yo! These are the core types for our Minecraft movie voting system.
  * 
  * Quick reminder for Matt and Lunasa:

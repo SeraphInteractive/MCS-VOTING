@@ -1,10 +1,8 @@
 /**
- *
  * The Skew Math:
  * - 1st place points = 3 * n1
  * - Lower rank points = 2 * n2 + 1 * n3
  * - Skew Ratio R = (3*n1 + eps) / (2*n2 + 1*n3 + eps)
- * 
  */
 
 import type { EntryScoreBreakdown } from './types.js';

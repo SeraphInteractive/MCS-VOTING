@@ -1,5 +1,4 @@
 /**
- * 
  * Shrinkage:
  * (Total_Score_j + K * Global_Mean) / (Votes_Count_j + K).
  * (https://en.wikipedia.org/wiki/Shrinkage_(statistics))
