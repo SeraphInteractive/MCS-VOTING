@@ -1,4 +1,4 @@
-# @vote-internals/logic
+# @platform/internal-logic
 
 Mathematical and statistical calculation engine for ranked ballot voting systems. Implements 3-2-1 weighted Borda scoring, paired covariance and variance estimators, Z-score hypothesis testing for rank separation, Empirical Bayesian shrinkage for exposure regularization, and multi-factor rank skew anomaly detection.
 
