@@ -1,5 +1,5 @@
 {
-  "name": "@vote-internals/logic",
+  "name": "@platform/internal-logic",
   "version": "1.0.0",
   "description": "Mathematical and statistical calculation engine for ranked ballot voting systems",
   "main": "dist/index.js",
@@ -19,8 +19,8 @@
     "bayesian-shrinkage",
     "anomaly-detection"
   ],
-  "author": "vote-internals team",
-  "license": "MIT",
+  "author": "Seraph Interactive, Inc.",
+  "license": "AGPL-3.0-only",
   "devDependencies": {
     "@types/node": "^26.5.0",
     "typescript": "^7.0.2"
